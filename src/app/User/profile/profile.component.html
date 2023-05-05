@@ -1,0 +1,168 @@
+<header>
+  <div class="page-header min-vh-75" style="background-image: url('https://images.unsplash.com/photo-1520769945061-0a448c463865?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1950&amp;q=80');" loading="lazy">
+    <span class="mask bg-gradient-dark opacity-5"></span>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 col-md-12 d-flex justify-content-center text-md-start text-center flex-column mt-sm-0 mt-7">
+          <div class="text-center">
+            <h1 class="text-white ">Your Perfect Place for Shopping</h1>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+<section class="py-5">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-8 mx-auto text-center">
+        <div class="ms-3 mb-md-5">
+          <div class="icon icon-shape icon-md bg-warning shadow-info mx-auto text-center mb-4">
+            <i class="material-icons opacity-10">person</i>
+          </div>
+          <h3>My Profile</h3>
+          <p> Created At :
+           {{user.createdAt}}
+          </p>
+          <p style="color: darkorange">{{Message}}</p>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-8 mx-auto">
+        <div class="card card-plain">
+          <form id="contact-form" method="post" autocomplete="off">
+            <div class="card-body">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="input-group input-group-static mb-4">
+                    <label>First Name</label>
+                    <input class="form-control" [(ngModel)]="user.firstName" name="firstName"type="text">
+                  </div>
+                </div>
+                <div class="col-md-6 ps-2">
+                  <div class="input-group input-group-static">
+                    <label>Last Name</label>
+                    <input type="text" class="form-control" [(ngModel)]="user.lastName" name="lastName" >
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="input-group input-group-static mb-4">
+                    <label>Username</label>
+                    <input class="form-control" [(ngModel)]="user.username" name="username"type="text">
+                  </div>
+                </div>
+                <div class="col-md-6 ps-2">
+                  <div class="input-group input-group-static">
+                    <label>Cin User</label>
+                    <input type="text" class="form-control" [(ngModel)]="user.cinUser" name="cin" >
+                  </div>
+                </div>
+              </div><div class="row">
+              <div class="col-md-6">
+                <div class="input-group input-group-static mb-4">
+                  <label>Phone Number</label>
+                  <input class="form-control" [(ngModel)]="user.phoneNumber" name="phoneNumber"type="text">
+                </div>
+              </div>
+              <div class="col-md-6 ps-2">
+                <div class="input-group input-group-static">
+                  <label>Email</label>
+                  <input type="text" class="form-control" [(ngModel)]="user.email" name="email" >
+                </div>
+              </div>
+            </div>
+
+<br>
+
+
+
+
+
+              <div class="row">
+
+                <div class="col-md-12">
+                  <button type="submit" (click)="updateUserProfile()" class="btn bg-warning float-end">Modify Account</button>
+                </div>
+
+              </div>
+            </div>
+          </form>
+
+        </div>
+
+      </div>
+
+    </div>
+    <div class="row align-items-center">
+      <div class="col-lg-8 mx-auto text-center">
+        <div class="ms-3 mb-md-5">
+          <h3>Make Your Own Market</h3>
+          <p>Creating Your Online Shop with Us is Easier than you think ! </p>
+          <a type="button" data-bs-target="#exampleLogin" data-bs-toggle="modal" ><div class="icon icon-shape icon-md bg-warning shadow-info mx-auto text-center mb-4">
+            <i class="material-icons opacity-10">add</i>
+          </div>
+          </a>
+
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</section>
+<!-- Modal -->
+<div class="modal fade" id="exampleLogin" tabindex="-1" aria-labelledby="exampleLogin" aria-hidden="true">
+  <div class="modal-dialog modal-danger modal-dialog-centered modal-" role="document">
+    <div class="modal-content">
+      <div class="modal-body p-0">
+        <div class="card bg-gray-200 shadow border-0 mb-0">
+          <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
+            <div class="bg-gradient-warning shadow-warning border-radius-lg py-3 pe-1 text-center py-4">
+              <h4 class="font-weight-bolder text-white mt-1 mb-0">Market Creation</h4>
+              <p class="mb-1 text-sm text-white">Type your Shop Informations and Your Market will be Created Within a seconds ! </p>
+            </div>
+          </div>
+          <div class="card-body">
+            <form role="form text-start">
+              <div class="input-group input-group-static mb-4">
+                <label>Market Name</label>
+                <input type="text" [(ngModel)]="market.marketName" name="marketname"  class="form-control">
+              </div>
+              <div class="input-group input-group-static mb-4">
+                <label>Immatriculation</label>
+                <input type="text" [(ngModel)]="market.immatriculation" name="immatriculation"  class="form-control">
+              </div>
+              <div class="input-group input-group-static mb-4">
+                <label>Address</label>
+                <input type="text" [(ngModel)]="market.marketAddress" name="marketaddress"  class="form-control">
+              </div>
+              <div class="input-group input-group-static mb-4">
+                <label>Phone Number</label>
+                <input type="text" [(ngModel)]="market.phoneNumber" name="phonenumber"  class="form-control">
+              </div>
+
+
+
+
+              <div class="text-center">
+                <p style="color: darkorange">{{Success}}</p>
+                <button type="button" (click)="addMarket()"  class="btn bg-gradient-warning mt-4 mb-0">Start Your Market</button>
+              </div>
+            </form>
+            <br>
+            <div class="text-center">
+              <button type="button"  class="btn bg-gradient-dark mb-0" data-bs-dismiss="modal">Close</button>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
